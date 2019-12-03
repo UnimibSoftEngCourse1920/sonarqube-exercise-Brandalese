@@ -42,8 +42,6 @@ public class ActiveTestSuite extends TestSuite {
             @Override
             public void run() {
                 try {
-                    // inlined due to limitation in VA/Java
-                    //ActiveTestSuite.super.runTest(test, result);
                     test.run(result);
                 } finally {
                     ActiveTestSuite.this.runFinished();
@@ -63,7 +61,7 @@ public class ActiveTestSuite extends TestSuite {
         }
     }
 
-    synchronized public void runFinished() {
+    public  synchronized void runFinished() {
         fActiveTestDeathCount++;
         notifyAll();
     }

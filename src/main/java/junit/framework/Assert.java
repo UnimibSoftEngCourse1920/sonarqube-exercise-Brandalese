@@ -17,7 +17,7 @@ public class Assert {
      * Asserts that a condition is true. If it isn't it throws
      * an AssertionFailedError with the given message.
      */
-    static public void assertTrue(String message, boolean condition) {
+    public static  void assertTrue(String message, boolean condition) {
         if (!condition) {
             fail(message);
         }
@@ -27,7 +27,7 @@ public class Assert {
      * Asserts that a condition is true. If it isn't it throws
      * an AssertionFailedError.
      */
-    static public void assertTrue(boolean condition) {
+    public static  void assertTrue(boolean condition) {
         assertTrue(null, condition);
     }
 
